@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.angle.hshb.customviewdemo.fragment.FirstFragment">
->
+
     <TextView
         android:id="@+id/tv_text"
         android:layout_width="match_parent"
@@ -16,4 +16,6 @@
         android:layout_height="wrap_content"
         android:text="确定"
         />
+
 </FrameLayout>
+

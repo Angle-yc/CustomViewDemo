@@ -18,4 +18,10 @@
         </attr>
     </declare-styleable>
 
+    <declare-styleable name="CircleProgressView2">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="progress_color" format="color"/>
+        <attr name="progress_background_color" format="color"/>
+    </declare-styleable>
+
 </resources>

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.angle.hshb.customviewdemo.fragment.EightFragment;
 import com.angle.hshb.customviewdemo.fragment.FirstFragment;
@@ -15,6 +16,7 @@ import com.angle.hshb.customviewdemo.fragment.SecondFragment;
 import com.angle.hshb.customviewdemo.fragment.SevenFragment;
 import com.angle.hshb.customviewdemo.fragment.SixFragment;
 import com.angle.hshb.customviewdemo.fragment.ThreeFragment;
+import com.angle.hshb.customviewdemo.view.progress.CircleProgressView2;
 import com.angle.hshb.customviewdemo.view.weiboline.ViewPagerTitle;
 
 import java.util.ArrayList;
@@ -22,10 +24,12 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    CircleProgressView2 progressView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        progressView = (CircleProgressView2) findViewById(R.id.progress);
         init();
     }
 
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerTitle viewPagerTitle= (ViewPagerTitle) findViewById(R.id.title);
         ViewPager viewPager= (ViewPager) findViewById(R.id.view_pager);
         viewPagerTitle.initData(new String[]{"关注","推荐","视频","直播","图片","段子","精华","热门"},viewPager,0);
+
 
         datas.add(new FirstFragment());
         datas.add(new SecondFragment());
@@ -46,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),datas));
 
+    }
+
+    /**
+     * 重新执行
+     * @param view
+     */
+    public void restart(View view) {
+        progressView.setProgress("0",100,true);
     }
 
 
