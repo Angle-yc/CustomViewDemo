@@ -18,6 +18,7 @@ import com.angle.hshb.customviewdemo.fragment.SixFragment;
 import com.angle.hshb.customviewdemo.fragment.ThreeFragment;
 import com.angle.hshb.customviewdemo.view.progress.CircleProgressView2;
 import com.angle.hshb.customviewdemo.view.weiboline.ViewPagerTitle;
+import com.chaychan.library.BottomBarLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,8 +38,9 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<Fragment>datas=new ArrayList<>();
         ViewPagerTitle viewPagerTitle= (ViewPagerTitle) findViewById(R.id.title);
         ViewPager viewPager= (ViewPager) findViewById(R.id.view_pager);
-        viewPagerTitle.initData(new String[]{"关注","推荐","视频","直播","图片","段子","精华","热门"},viewPager,0);
+        BottomBarLayout barLayout = (BottomBarLayout) findViewById(R.id.bbl);
 
+        viewPagerTitle.initData(new String[]{"关注","推荐","视频","直播","图片","段子","精华","热门"},viewPager,0);
 
         datas.add(new FirstFragment());
         datas.add(new SecondFragment());
@@ -50,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         datas.add(new EightFragment());
 
         viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),datas));
-
+        barLayout.setViewPager(viewPager);
     }
 
     /**

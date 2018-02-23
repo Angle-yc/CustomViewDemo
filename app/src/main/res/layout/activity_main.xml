@@ -16,7 +16,6 @@
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         ></com.angle.hshb.customviewdemo.view.weiboline.ViewPagerTitle>
 
     <android.support.v4.view.ViewPager
@@ -24,7 +23,139 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:visibility="gone"></android.support.v4.view.ViewPager>
+        ></android.support.v4.view.ViewPager>
+    <com.chaychan.library.BottomBarLayout
+        android:id="@+id/bbl"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="@color/tab_gb"
+        >
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_home_normal"
+            app:iconSelected="@mipmap/tab_home_selected"
+            app:itemText="关注"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_video_normal"
+            app:iconSelected="@mipmap/tab_video_selected"
+            app:itemText="推荐"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:unreadThreshold="999"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_micro_normal"
+            app:iconSelected="@mipmap/tab_micro_selected"
+            app:itemText="视频"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_me_normal"
+            app:iconSelected="@mipmap/tab_me_selected"
+            app:itemText="直播"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_home_normal"
+            app:iconSelected="@mipmap/tab_home_selected"
+            app:itemText="图片"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_video_normal"
+            app:iconSelected="@mipmap/tab_video_selected"
+            app:itemText="段子"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:unreadThreshold="999"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_micro_normal"
+            app:iconSelected="@mipmap/tab_micro_selected"
+            app:itemText="随便来"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            app:iconNormal="@mipmap/tab_me_normal"
+            app:iconSelected="@mipmap/tab_me_selected"
+            app:itemText="谁的"
+            app:textColorNormal="@color/tab_normal_color"
+            app:textColorSelected="@color/tab_selected_color"
+            app:itemTextSize="8sp"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bg"
+            />
+    </com.chaychan.library.BottomBarLayout>
 
     <ScrollView
         android:visibility="gone"
@@ -37,6 +168,7 @@
             android:layout_height="match_parent"/>
     </ScrollView>
     <Button
+        android:visibility="gone"
         android:layout_marginTop="100dp"
         android:layout_gravity="center"
         android:text="RESTART"
@@ -44,6 +176,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <com.angle.hshb.customviewdemo.view.progress.CircleProgressView2
+        android:visibility="gone"
         android:id="@+id/progress"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
