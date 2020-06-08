@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.viewtest.DrawBoardActivity">
+
+        <com.angle.hshb.customviewdemo.view.wirtingpan.new_code.NewDrawPenView
+            android:id="@+id/draw_pen_view"
+            android:layout_width="match_parent"
+            android:layout_height="400dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_stroke_pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="钢笔" />
+
+            <Button
+                android:id="@+id/btn_brush_pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="水彩笔" />
+
+            <Button
+                android:id="@+id/btn_clear_canvas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="清除画布" />
+
+            <Button
+                android:id="@+id/btn_get_bitmap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取资源" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
