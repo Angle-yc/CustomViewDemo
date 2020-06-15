@@ -11,6 +11,15 @@
         android:id="@+id/touchPull"
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:pColor="@color/colorAccent"
+        app:pCenterDrawable="@drawable/ic_draw_circle"
+        app:pCenterDrawableMargin="2dp"
+        app:pDragHeight="140dp"
+        app:pRadius="20dp"
+        app:pTangentAngle="110"
+        app:pTargetGravityHeight="4dp"
+        app:pTargetWidth="200dp"
+        />
 
 </RelativeLayout>

@@ -34,6 +34,8 @@ public class TouchPullActivity extends AppCompatActivity {
                             mTouchPullView.setProgress(progress);
                             return true;
                         }
+                        case MotionEvent.ACTION_UP:
+                            mTouchPullView.release();
                         break;
                     default:
                         break;
