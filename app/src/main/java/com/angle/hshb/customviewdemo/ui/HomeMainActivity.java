@@ -10,6 +10,8 @@ import com.angle.hshb.customviewdemo.adapter.ItemTextAdapter;
 import com.angle.hshb.customviewdemo.bean.ItemBean;
 import com.angle.hshb.customviewdemo.ui.viewtest.BezierActivity;
 import com.angle.hshb.customviewdemo.ui.viewtest.DrawBoardActivity;
+import com.angle.hshb.customviewdemo.ui.viewtest.PathActivity;
+import com.angle.hshb.customviewdemo.ui.viewtest.PracDrawActivity;
 import com.angle.hshb.customviewdemo.ui.viewtest.ProgressCircleActivity;
 import com.angle.hshb.customviewdemo.ui.viewtest.TouchPullActivity;
 
@@ -40,6 +42,8 @@ public class HomeMainActivity extends AppCompatActivity {
         list.add(new ItemBean("画板", DrawBoardActivity.class));
         list.add(new ItemBean("下拉刷新粘性圆效果", TouchPullActivity.class));
         list.add(new ItemBean("贝塞尔曲线的练习", BezierActivity.class));
+        list.add(new ItemBean("自由练习", PracDrawActivity.class));
+        list.add(new ItemBean("路径练习", PathActivity.class));
         return list;
     }
 }
